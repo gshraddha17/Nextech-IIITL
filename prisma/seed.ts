@@ -25,11 +25,11 @@ async function main() {
     });
   }
 
-  // CLASS
+  // Year
   for (let i = 1; i <= 6; i++) {
     await prisma.class.create({
       data: {
-        name: `${i}A`, 
+        name: `${i}`, 
         gradeId: i, 
         capacity: Math.floor(Math.random() * (20 - 15 + 1)) + 15,
       },
@@ -38,17 +38,18 @@ async function main() {
 
   // SUBJECT
   const subjectData = [
-    { name: "Mathematics" },
-    { name: "Science" },
-    { name: "English" },
-    { name: "History" },
-    { name: "Geography" },
-    { name: "Physics" },
-    { name: "Chemistry" },
-    { name: "Biology" },
-    { name: "Computer Science" },
-    { name: "Art" },
+    { name: "Data Structures" },
+    { name: "Algorithms" },
+    { name: "Operating Systems" },
+    { name: "Database Systems" },
+    { name: "Computer Networks" },
+    { name: "Software Engineering" },
+    { name: "Discrete Mathematics" },
+    { name: "Theory of Computation" },
+    { name: "Machine Learning" },
+    { name: "Artificial Intelligence" },
   ];
+  
 
   for (const subject of subjectData) {
     await prisma.subject.create({ data: subject });

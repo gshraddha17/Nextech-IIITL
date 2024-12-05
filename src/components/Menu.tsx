@@ -37,6 +37,12 @@ const menuItems = [
         visible: ["admin"],
       },
       {
+        icon: "/student.png",
+        label: "Alumni",
+        href: "/list/alumnis",
+        visible: ["admin", "alumni"],
+      },
+      {
         icon: "/class.png",
         label: "Classes",
         href: "/list/classes",
@@ -86,9 +92,21 @@ const menuItems = [
       },
       {
         icon: "/announcement.png",
-        label: "Announcements",
-        href: "/list/announcements",
+        label: "Assignment Submission",
+        href: "/list/assignmentSubmission",
         visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/class.png",
+        label: "Start a Meet",
+        href: "https://video-conferencing-q37r.vercel.app/",
+        visible: ["admin", "teacher", "student"],
+      },
+      {
+        icon: "/class.png",
+        label: "AI Powered Academic Advisor",
+        href: "https://chatbot-taupe-seven.vercel.app/",
+        visible: ["admin", "teacher", "student"],
       },
     ],
   },
